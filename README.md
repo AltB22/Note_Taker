@@ -16,6 +16,10 @@
   [Tests](#tests)
 
   [Questions](#questions)
+  
+  ## Screenshot of Deployed Application
+
+  ![Image of Notes Page Generate by app with Header "Note Taker" and a of notes in the left hand column and blank note on the right side.](./assets/Note_Taker_Screenshot.png)
 
   ## Installation
   - In order to run the app, the user should clone this repository to their local device then run npm init followed by npm install in the integrated command line from the root of the directory.  That will set up the proper package.json file and install the necessary packages.
