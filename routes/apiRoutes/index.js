@@ -45,7 +45,7 @@ router.get('/notes', (req, res) => {
     readFromFile('./db/db.json')
       .then((data) => JSON.parse(data))
       .then((json) => {
-        // Makes a new array of all notes except where the noteId matches
+        // Makes a new array of all notes except where the noteId matches the one selected
         const result = json.filter((note) => note.id !== noteId);
   
         writeToFile('./db/db.json', result);// Saves the  new array to the filesystem
