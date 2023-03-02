@@ -30,21 +30,16 @@ router.get('/notes', (req, res) => {
     .catch((err) => console.error(err));
 });
 
-const filePath = path.join(__dirname, '../db/db.json');
-
 router.post('/notes', (req, res) => {
   const { title, text } = req.body;
-  const newNote = { title, text, id: notes.length + 1 };
-  notes.push(newNote);
-  writeToFile(filePath, notes)
-    .then(() =>
-      res.json({
-        success: true,
-        message: 'Note added successfully',
-        data: newNote,
-      })
-    )
-    .catch((err) => console.error(err));
+  
+  if(req.body) {
+    const newNote = {
+        title, 
+        
+    }
+  }
+  
 });
 
 module.exports = router;
