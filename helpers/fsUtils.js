@@ -1,3 +1,5 @@
+//fsUtils and uuid were both referred to from class activities as helper functions that can be called in routes.
+
 const fs = require('fs');
 const util = require('util');
 
