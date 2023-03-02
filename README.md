@@ -1,8 +1,9 @@
-# Note Taker Starter Code
+# Note Taker App - Utilizing Express Back End
 [![License site](https://img.shields.io/badge/License-MIT-blue.svg)](https://choosealicense.com/licenses/mit)
 
 ## Description
-  - This application uses JavaScript and Inquirer.js to dynamically create content for an HTML file from the command line interface.  It also utilizes the built in fs module to interact with the file system.  The user will be presented with a series of prompts in the commmand line, the asnwers to which will be rendered as content in a new index.html file which can then be launched in the browser.  The resulting site is intented to serve as a profile page for development teams that incluedes information about the team manager, team engineers, and team interns.
+  - This application uses JavaScript, HTML, CSS and utilizes Express.js as a Node.js web application framework for the back end to create a web based note taker application.  The code is structured in modular format with api routes and html routes in separate directories. Note information is stored as objects in an array in json format.  The application also makes use of helper functions which are called insided the various api routes.
+
 ## Table of Contents
   [Installation](#installation)
 
@@ -17,13 +18,13 @@
   [Questions](#questions)
 
   ## Installation
-  - In order to run the app, installation of node.js version 16 or higher is required on the user's device.  In addition, inquirer.js (https://www.npmjs.com/package/inquirer/v/8.2.4) is required to be installed in the parent directory.  Finally, testing features are built in which require jest to be installed also.  
+  - In order to run the app, the user should clone this repository to their local device then run npm init followed by npm install in the integrated command line from the root of the directory.  That will set up the proper package.json file and install the necessary packages.
   ## Usage
-  - This application saves time for development team managers who want to quickly and easily generate a profile page for their team  that includes information about themselves, their engineers, and their interns.  The app serves as a template propmting  the user to answer a series of questions that are required for output.  Access is via the command line terminal interface.  Please see link for video on proper installation and usage of the appliccation.  
+  - This application helps the user to digitally store and save notes by entering a note title and note content.  The user can then refer to each note in the saved notes column by referencing the each note's title.  The user may also edit and delete notes from the same list. Once the proper packages are installed, the user may start the app by running node server from the integrated command line and opening the browser to localhost:3001.
   ## Contributing
-  - Developers are welcome to contribute to this project by cloning this GitHub repository to their local device.  Expanding the app's functionality to include additional roles beyond Manager, Engineer, and Intern would be likely the most helpful.  Keep in mind that each role type is defined as a class in the lib directory.  Any new classes would need to extend the intial employee class. 
+  - Developers are welcome to contribute to this project by cloning this GitHub repository to their local device.  One potential area of expansion is to further deconstruct the apiRoutes into separate modular files beyond the index.js where all api routes are currently housed.
   ## Tests
-  - Currently no tests are available to run.
+  - Currently no tests are available or required to run the application.
   ## Questions
   - Please visit my GitHub profile for further information about his project (https://github.com/AltB22)
   - Please email Please contact William Massie at the following email address: altbcodes@gmail.com with additional quesitons.
