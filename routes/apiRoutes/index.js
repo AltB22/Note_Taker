@@ -7,6 +7,8 @@ const fs = require('fs');
 const uuid = require('../../helpers/uuid');
 // const test = require('../../db/db.json')
 
+
+//GET route to retreive the notes data from db.json
 router.get('/notes', (req, res) => {
     fs.readFile(path.join(__dirname, '../../db/db.json'), 'utf8', (err, data) => {
       if (err) {
@@ -19,7 +21,7 @@ router.get('/notes', (req, res) => {
     });
   });
   
-  // POST Route for submitting a new note
+  // POST route to save a new note to db.json
   router.post('/notes', (req, res) => {
     const { title, text } = req.body;
     
@@ -35,6 +37,22 @@ router.get('/notes', (req, res) => {
     } else {
       res.error('Error adding note');
     }
+  });
+
+  router.delete('/:id', (req, res) => {
+    const noteId = req.params.id;
+    readFromFile('./db/db.json')
+      .then((data) => JSON.parse(data))
+      .then((json) => {
+        // Make a new array of all tips except the one with the ID provided in the URL
+        const result = json.filter((note) => note.id !== noteId);
+  
+        // Save that array to the filesystem
+        writeToFile('./db/db.json', result);
+  
+        // Respond to the DELETE request
+        res.json(`Item ${noteId} has been deleted`);
+      });
   });
   
   module.exports = router;
